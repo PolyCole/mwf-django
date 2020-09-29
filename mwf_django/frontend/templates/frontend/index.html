@@ -7,6 +7,11 @@
 </head>
 <body>
 <h1>Cole's Bulletin Board</h1>
+<form method="post">
+	{% csrf_token %}
+	{{ bulletin_form.as_p }}
+	<input type="submit" value="Post"/>
+</form>
 <div id="app">
     <!-- React will load here -->
 </div>
