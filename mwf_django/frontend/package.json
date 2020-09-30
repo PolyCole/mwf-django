@@ -3,10 +3,20 @@
   "version": "1.0.0",
   "description": "The frontend for my distinction project using React and Django.",
   "main": "index.js",
+  "watch": {
+      "dev": {
+        "patterns": [
+          "frontend"
+        ],
+        "extensions": "js,html,scss,css",
+        "quiet": false
+      }
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --mode development ./src/index.js --output ./static/frontend/main.js",
-    "build": "webpack --mode production ./src/index.js --output ./static/frontend/main.js"
+    "build": "webpack --mode production ./src/index.js --output ./static/frontend/main.js",
+    "watch": "npm-watch dev"
   },
   "keywords": [],
   "author": "Cole Polyak",
@@ -16,9 +26,15 @@
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0",
+    "css-loader": "^4.3.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "style-loader": "^1.2.1",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "npm-watch": "^0.7.0"
   }
 }
