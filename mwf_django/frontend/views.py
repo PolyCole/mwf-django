@@ -15,5 +15,7 @@ def index(request):
 	else:
 		cont['bulletin_form'] = BulletinPostForm()
 
+	cont['authenticated'] = request.user.is_authenticated
+
 	
 	return render(request, 'frontend/index.html', cont)

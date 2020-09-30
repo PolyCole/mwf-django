@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Django REST with React</title>
 </head>
 <body>
-<h1>Cole's Bulletin Board</h1>
+<div class="container">
+	<h1>Cole's Bulletin Board</h1>
+</div>
 <form method="post">
 	{% csrf_token %}
-	{{ bulletin_form.as_p }}
+	<p>
+	    <label for="id_user">Username</label> 
+	    <input id="id_user" maxlength="50" name="user" type="text" required value="anonymous"/>
+	</p>
+	<p>
+	    <label for="id_message">Message</label> 
+	    <input id="id_message" maxlength="254" name="message" type="text" class="submissionfield" required />
+	</p>
 	<input type="submit" value="Post"/>
 </form>
 <div id="app">
