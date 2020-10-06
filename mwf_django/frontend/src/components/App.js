@@ -33,15 +33,19 @@ class App extends Component {
 
   render() {
     return (
-      <ul>
+      <div class="list-group">
         {this.state.data.map(post => {
           return (
-            <li key={post.id}>
-              {post.message} - {post.user}
-            </li>
+          <div class="list-group-item" id={post.id}>
+            <div className="d-flex w-100 justify-content-between">
+                  <h5 className="mb-1">{post.user}</h5>
+                  <small>{post.created_at}</small>
+            </div>
+            <p className="mb-1">{post.message}</p>
+          </div>
           );
         })}
-      </ul>
+      </div>
     );
   }
 }

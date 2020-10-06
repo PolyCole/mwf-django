@@ -12,3 +12,15 @@
 .header {
 	text-align: center;
 }
+
+.wrapper {
+	width: 50%;
+	height: 100vh;
+	margin: 0 auto;
+	background-color: #fff;
+}
+
+body {
+	background-color: #212121;
+}
+
