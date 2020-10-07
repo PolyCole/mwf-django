@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends "frontend/base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Let's get you registered!</h1>
+</div>
+
+<div class="container">
+    <form enctype="multipart/form-data" method="post">
+        {% csrf_token %}
+        {{ user_form.as_p }}
+        {{ profile_form.as_p }}
+        <input type="submit" value="register"/>
+    </form>
+</div>
+
+{% endblock %}
