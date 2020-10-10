@@ -2,6 +2,7 @@
 {% extends "frontend/base.html"%}
 
 {% block content %}
+{{ authenticated }}
 <form method="post">
 	{% csrf_token %}
 	<p>
