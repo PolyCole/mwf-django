@@ -149,5 +149,5 @@ REST_FRAMEWORK = {
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, '/static/frontend/')]
 
-LOGIN_URL = '/frontend/user_login'
+LOGIN_URL = 'board/user_login'
 
