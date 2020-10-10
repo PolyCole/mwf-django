@@ -3,6 +3,7 @@ import { render } from "react-dom";
 
 class App extends Component {
   constructor(props) {
+    console.log("Constructor");
     super(props);
     this.state = {
       data: [],
@@ -12,7 +13,8 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch("api/bulletinpost")
+    console.log("Call was made");
+    fetch("api/bulletinpost/")
       .then(response => {
         if (response.status > 400) {
           return this.setState(() => {
@@ -23,6 +25,8 @@ class App extends Component {
       })
       .then(data => {
         this.setState(() => {
+          console.log("DATA;");
+          console.log(data);
           return {
             data,
             loaded: true
@@ -32,11 +36,12 @@ class App extends Component {
   }
 
   render() {
+    console.log("Render got called");
     return (
       <div class="list-group">
         {this.state.data.map(post => {
           return (
-          <div class="list-group-item" id={post.id}>
+          <div className="list-group-item" id={post.id}>
             <div className="d-flex w-100 justify-content-between">
                   <h5 className="mb-1">{post.user}</h5>
                   <small>{post.created_at}</small>

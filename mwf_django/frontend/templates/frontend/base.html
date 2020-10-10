@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cole's Bulletin Board</title>
+    <title>Bulletin Board</title>
     <link rel="stylesheet" href="{% static 'frontend/css/index.css'%}">
     <link rel="stylesheet" href="{% static 'frontend/css/bootstrap.css'%}">
 
@@ -13,11 +13,11 @@
 <body>
     <div class="wrapper">
         <div class="container header">
-            <h1>Cole's Bulletin Board</h1>
+            <h1>Bulletin Board</h1>
         </div>
         {% block content %}
         {% endblock %}
     </div>
+    <script src="{% static 'frontend/main.js' %}"></script>
 </body>
-<script src="{% static "frontend/main.js" %}"></html>
 </html>
