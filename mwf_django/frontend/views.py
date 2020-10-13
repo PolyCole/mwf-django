@@ -55,5 +55,5 @@ def register(request):
 
     context['user_form'] = user_form
     context['profile_form'] = profile_form
-    context['registere'] = Registered
+    context['registered'] = Registered
     return render(request, 'frontend/register.html', context)

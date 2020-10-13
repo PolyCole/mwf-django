@@ -20,6 +20,12 @@
 	background-color: #fff;
 }
 
+.errorlist {
+	text-decoration: none;
+	color: #f60404;
+	font-weight: bold;
+}
+
 body {
 	background-color: #212121 !important;
 }
