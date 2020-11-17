@@ -1,31 +1,20 @@
 <!DOCTYPE html>
-<html>
-<head>
+{% extends "frontend/base.html"%}
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cole's Bulletin Board</title>
-</head>
-<body>
-<div class="container header">
-	<h1>Cole's Bulletin Board</h1>
-</div>
+{% block content %}
 <form method="post">
 	{% csrf_token %}
 	<p>
-	    <label for="id_user">Username</label> 
-	    <input id="id_user" maxlength="50" name="user" type="text" required value="anonymous"/>
+		<label for="id_user">Username</label>
+		<input id="id_user" maxlength="50" name="user" type="text" required value="anonymous"/>
 	</p>
 	<p>
-	    <label for="id_message">Message</label> 
-	    <input id="id_message" maxlength="254" name="message" type="text" class="submissionfield" required />
+		<label for="id_message">Message</label>
+		<input id="id_message" maxlength="254" name="message" type="text" class="submissionfield" required />
 	</p>
 	<input type="submit" value="Post"/>
 </form>
 <div id="app">
-    <!-- React will load here -->
+		<!-- React will load here -->
 </div>
-</body>
-{% load static %}
-<script src="{% static "frontend/main.js" %}"></script>
-</html>
+{% endblock %}

@@ -1,0 +1,32 @@
+.submissionfield { 
+	width: 390px; 
+	height: 90px; 
+	border: 1px solid #999999; 
+	text-align: left;
+	padding-left:0;
+	padding-top:0;
+	padding-bottom:0.4em;
+	padding-right: 0.4em;
+}
+
+.header {
+	text-align: center;
+}
+
+.wrapper {
+	width: 50%;
+	height: 100vh;
+	margin: 0 auto;
+	background-color: #fff;
+}
+
+.errorlist {
+	text-decoration: none;
+	color: #f60404;
+	font-weight: bold;
+}
+
+body {
+	background-color: #212121 !important;
+}
+
